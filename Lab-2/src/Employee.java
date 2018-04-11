@@ -1,53 +1,51 @@
-public class Employee
-{ 
+class Employee{
+	
 private String firstName; 
 private String lastName; 
 private double salary;
-private String doj;
+Date doj;
+private String grade;
 static int count; 
 private int id;
 
-
-
-public Employee() 
-{ 
-System.out.println("inside default constructor");
-firstName = "NA"; 
-lastName = "NA"; 
-id = ++count; 
-salary = 0; 
-doj = "NA"; 
-} 
- 
-public Employee(String firstName,String lastName,String doj,double salary) 
-{ 
-System.out.println("inside parameterized constructor");
-this.firstName = firstName; 
+	
+	
+	
+	
+	
+	public Employee(String firstName,String lastName,double salary,String grade,Date doj) {
+		
+		this.firstName = firstName; 
 this.lastName = lastName; 
-this.salary = salary; 
+this.salary = salary;
+this.grade = grade; 
 this.doj = doj; 
 id = ++count; 
-} 
-public static void main(String[] args){
-  Employee e = null;
-		
-		e = new Employee();
-		e.displayDetails();
-		
-		e = new Employee("sarvazna","aditya","sep2017",15000);
-		e.displayDetails();
-		e = new Employee("sarvazna","aditya","sep2017",15000);
-		e.displayDetails();
-		e = new Employee("sarvazna","aditya","sep2017",15000);
-		e.displayDetails();
-		e = new Employee("sarvazna","aditya","sep2017",15000);
-		e.displayDetails();
-}
-public void displayDetails(){
-		System.out.print("\nid "+ id);
-		System.out.println("\nfirstname "+ firstName);
-		System.out.println("\nlastName "+ lastName);
-		System.out.println("\ndoj "+ doj);
-		System.out.println("\nsalary "+ salary);
 	}
+	
+	public void displayDetails(){
+		System.out.println("\n*************************");
+System.out.print("\nid: "+ id);
+		System.out.println("\nfirstname: "+ firstName);
+		System.out.println("\nlastName: "+ lastName);
+System.out.println("\nsalary: "+ salary);
+System.out.println("\ngrade: "+ grade);
+		System.out.println("\ndoj: "+ doj);
+System.out.println("\n*************************");
+		
+	}
+	
+	
+	
+	
+	
+	
 }
+
+
+
+
+
+
+
+
